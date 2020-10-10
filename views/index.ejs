@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a poll</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Create a poll and get results for free!</h1>
+    <small class="text text-muted">
+      There can only be four option for the poll.
+    </small>
+    <% if(error == true) { %>
+      <div class="alert alert-danger mt-4" style="margin-bottom: -10px;" role="alert">
+       <%= message %>
+      </div>
+    <% } %> 
+
+    <form action="/" method="POST">
+      <div class="form-group">
+        <br>
+        <br>
+        <input type="text" name="first" class="form-control" placeholder="first option">
+        <br>
+        <input type="text" name="second" class="form-control" placeholder="second option">
+        <br>
+        <input type="text" name="third" class="form-control" placeholder="third option">
+        <br>
+        <input type="text" name="fourth" class="form-control" placeholder="fourth option">
+        <br>
+        <button type="submit" class="btn btn-info">Make a poll!</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

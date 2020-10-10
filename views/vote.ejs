@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= poll.redirectkey %> Poll</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+  #chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+</style>
+<body>
+  <div class="container">
+    <h1 class="mb-4 redirectKey" id="<%= poll.redirectkey %>">Choose for whome you vote.</h1>
+      <div class="form-group form-check">
+        <input type="radio" class="form-check-input" name="vote" value="<%= poll.first.name %>" id="first"> <%= poll.first.name %>
+        <br>
+        <input type="radio" class="form-check-input" name="vote" value="<%= poll.second.name %>" id="second"> <%= poll.second.name %>
+        <br>
+        <input type="radio" class="form-check-input" name="vote" value="<%= poll.third.name %>" id="third"> <%= poll.third.name %>
+        <br>
+        <input type="radio" class="form-check-input" name="vote" value="<%= poll.fourth.name %>" id="fourth"> <%= poll.fourth.name %>
+        <br>
+        <br>
+        <button style="border-radius: 0px; margin-top: -30px;" id="button" class="btn btn-info">Submit</button>
+    </form>
+    <div id="chart"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/static/js/index.js"></script>
+</body>
+</html>
